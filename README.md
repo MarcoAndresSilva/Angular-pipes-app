@@ -1,5 +1,5 @@
-# 05PipeApp
-
+# 05-PipeApp
+App to know pioes of angular
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.1.
 
 ## Development server
