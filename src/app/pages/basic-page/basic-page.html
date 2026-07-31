@@ -118,7 +118,9 @@
 </div>
 
 <div class="divider"></div>
-
+<section mx-10>
+  <h1 text-2xl font-bold>HH MM & YYYY MM DD Pipe</h1>
+</section>
 <div class="stats shadow">
   <div class="stat">
     <div class="stat-title">Date: 'YYYY MM'</div>
@@ -156,28 +158,17 @@
 </div>
 
 <div class="divider"></div>
-<div class="">
-  <h1 class="text-2xl">Locale actual:<span class="badge badge-secondary"></span></h1>
-
-  <button class="btn btn-primary" (click)="changeLocale('es')">Cambiar a Español</button>
-  <button class="btn btn-primary" (click)="changeLocale('en')">Cambiar a Inglés</button>
-</div>
+<section mx-10>
+  <h1 text-2xl font-bold>Locale Pipe</h1>
+</section>
 <div class="stats shadow">
   <div class="stat">
-    <div class="stat-title">Date: 'DD MM YYYY'</div>
-    <div class="stat-value">{{ customDate() | date: 'dd/MM/yyyy' }}</div>
-    <div class="stat-desc">{{ customDate }}</div>
-  </div>
+    <div class="gap-2">
+      <h1 class="text-2xl">Locale actual:<span class="badge badge-secondary"></span></h1>
 
-  <div class="stat">
-    <div class="stat-title">Date Pipe</div>
-    <div class="stat-value">{{ customDate() | date: 'HH;mm;ss' }}</div>
-    <div class="stat-desc">{{ customDate }}</div>
-  </div>
-
-  <div class="stat">
-    <div class="stat-title">Date Pipe</div>
-    <div class="stat-value">{{ customDate() | date: 'EEEE d, MMMM y' }}</div>
-    <div class="stat-desc">{{ customDate }}</div>
+      <button class="btn btn-primary" (click)="changeLocale('fr')">Cambiar a Frances</button>
+      <button class="btn btn-primary" (click)="changeLocale('es')">Cambiar a Español</button>
+      <button class="btn btn-primary" (click)="changeLocale('en')">Cambiar a Ingles</button>
+    </div>
   </div>
 </div>

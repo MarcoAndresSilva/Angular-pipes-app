@@ -19,4 +19,8 @@ export default class BasicPage {
     }, 1000);
     return () => clearInterval(interval);
   });
+
+  changeLocale(locale: string) {
+    document.documentElement.lang = locale;
+  }
 }
