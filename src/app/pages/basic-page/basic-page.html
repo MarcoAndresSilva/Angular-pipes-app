@@ -154,3 +154,25 @@
     <div class="stat-desc">{{ customDate }}</div>
   </div>
 </div>
+
+<div class="divider"></div>
+
+<div class="stats shadow">
+  <div class="stat">
+    <div class="stat-title">Date: 'DD MM YYYY'</div>
+    <div class="stat-value">{{ customDate() | date: 'dd/MM/yyyy' }}</div>
+    <div class="stat-desc">{{ customDate }}</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-title">Date Pipe</div>
+    <div class="stat-value">{{ customDate() | date: 'HH;mm;ss' }}</div>
+    <div class="stat-desc">{{ customDate }}</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-title">Date Pipe</div>
+    <div class="stat-value">{{ customDate() | date: 'EEEE d, MMMM y' }}</div>
+    <div class="stat-desc">{{ customDate }}</div>
+  </div>
+</div>
