@@ -1,9 +1,40 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CardComponent } from '../../components/card/card';
+import { I18nSelectPipe } from '@angular/common';
+
+const clientOne = {
+  name: 'Juli',
+  gender: 'female',
+  age: 3,
+  address: 'Calle falsa 123',
+};
+
+const clientTwo = {
+  name: 'Marco',
+  gender: 'male',
+  age: 2,
+  address: 'Calle verdadera 456',
+};
 
 @Component({
   selector: 'app-uncommon-page',
-  imports: [CardComponent],
+  imports: [CardComponent, I18nSelectPipe],
   templateUrl: './uncommon-page.html',
 })
-export default class UncommonPage {}
+export default class UncommonPage {
+  // i18nSelect
+  client = signal(clientOne);
+
+  invitationMap = {
+    male: 'invitarlo',
+    female: 'invitarla',
+  };
+
+  changueClient() {
+    if (this.client().name === 'Juli') {
+      this.client.set(clientTwo);
+      return;
+    }
+    this.client.set(clientOne);
+  }
+}
