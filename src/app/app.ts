@@ -6,7 +6,7 @@ import { Navbar } from './components/navbar/navbar';
   selector: 'app-root',
   imports: [RouterOutlet, Navbar],
   templateUrl: './app.html',
-  styleUrl: './app.scss',
+  styleUrl: '../styles.css',
 })
 export class App {
   protected readonly title = '05-pipe-app';
