@@ -39,6 +39,11 @@ export default class UncommonPage {
   }
 
   // i18nPlural
+  clientsMap = signal({
+    '=0': 'no tenemos ningún cliente esperando.',
+    '=1': 'tenemos un cliente esperando.',
+    other: 'tenemos # clientes esperando.',
+  });
   clients = signal(['Lila', 'Juli', 'Bubu', 'papi', 'summeer', 'marco']);
   deleteClient() {
     this.clients.update((prev) => prev.slice(1));

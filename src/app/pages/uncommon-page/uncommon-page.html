@@ -13,7 +13,9 @@
   </app-card>
 
   <app-card title="i18nPluralPipe">
-    <p>actualmnte hay {{ clients().length }} esperando</p>
-    <button class="btn btn-primary" (click)="deleteClient()">Eliminar cliente</button>
+    <p>actualmnte hay {{ clients().length | i18nPlural: clientsMap() }} esperando</p>
+    <button [disabled]="clients.length === 0" (click)="deleteClient()" class="btn btn-primary">
+      Eliminar cliente
+    </button>
   </app-card>
 </div>
