@@ -14,8 +14,11 @@
 
   <app-card title="i18nPluralPipe">
     <p>actualmnte hay {{ clients().length | i18nPlural: clientsMap() }} esperando</p>
-    <button [disabled]="clients.length === 0" (click)="deleteClient()" class="btn btn-primary">
-      Eliminar cliente
-    </button>
+    <button (click)="deleteClient()" class="btn btn-primary">Eliminar cliente</button>
+  </app-card>
+
+  <app-card title="slicePipe">
+    <b>original</b>
+    <p class="text-primary">{{ clients().join(', ') }}</p>
   </app-card>
 </div>
