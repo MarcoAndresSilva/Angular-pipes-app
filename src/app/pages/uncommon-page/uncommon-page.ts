@@ -78,9 +78,9 @@ export default class UncommonPage {
   };
 
   // AsyncPipe
-  promiseValue = (Promise<string> = new Promise((resolve, reject) => {
+  promiseValue: Promise<string> = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve('Tenemos data de promesa');
     }, 3500);
-  }));
+  });
 }
