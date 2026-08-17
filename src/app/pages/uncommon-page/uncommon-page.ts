@@ -82,8 +82,7 @@ export default class UncommonPage {
     setTimeout(() => {
       resolve('Tenemos data de promesa');
     }, 3500);
-
   });
 
-  // otro p
+  // otro pipe qlo
 }
